@@ -33,5 +33,15 @@ public class OperationsList {
 		
 	}
 	
-	
+	public void insertData() {
+		Linkedlist list = new Linkedlist();
+		list.insertNode(56);
+		list.insertNode(70);
+		list.insertNode(30);
+		System.out.println();
+		System.out.print("Linkedlist sequence after inserting : " );
+		list.dispalyLinkedList();
+		
+		
+	}
 }
