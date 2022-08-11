@@ -22,6 +22,25 @@ public class Linkedlist {
 		}
 	}
 	
+	//creating append method
+	 public void append(int data) { 
+	        INode newNode = new INode(data);
+	   /* if head is null, new node will add to head and tail.Otherwise tail takes the next node.
+	        If list is empty, both head and tail will point to new node */
+	        if (head == null) {
+	            head = newNode;
+	            tail = newNode;
+	            
+	  //newNode will be added after tail such that tail's next will point to newNode  
+	        } else {
+	            this.tail.next = newNode;
+	            tail = newNode;
+	        }
+	    }
+	
+	 
+	 
+	// It will display all the nodes present in the list
 	public void dispalyLinkedList() {
 		INode currentNode = head;
 		//iterating using while loop.if current node is not empty, it adds new Node to the next
