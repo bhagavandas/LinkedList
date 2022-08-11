@@ -66,6 +66,33 @@ public class Linkedlist {
 			pointer.next = newNode;
 		}
 	}
+	
+	public void deleteNode(int i) {
+		INode newNode = new INode(i);
+		 // Store head node
+        INode temp = head, prev = null;
+ 
+        // If head node itself holds the key to be deleted
+        if (temp != null && temp.key == i) {
+            head = temp.next; // Changed head
+            return;
+        }
+ 
+        // Search for the key to be deleted, keep track of
+        // the previous node as we need to change temp.next
+        while (temp != null && temp.key != i) {
+            prev = temp;
+            temp = temp.next;
+        }
+ 
+        // If key was not present in linked list
+        if (temp == null)
+            return;
+ 
+        // Unlink the node from linked list
+        prev.next = temp.next;
+    
+	}
 
 	// It will display all the nodes present in the list
 	public void dispalyLinkedList() {

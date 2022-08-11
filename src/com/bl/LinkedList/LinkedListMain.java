@@ -9,6 +9,7 @@ public class LinkedListMain {
 		obj.addData();
 		obj.appendData();
 		obj.insertData();
+		obj.DeleteData();
 
 	}
 }
