@@ -45,30 +45,23 @@ public class Linkedlist {
 		// if list is empty
 		if (head == null)
 			head = newNode;
+
 		else {
-			// get a new node
+
+			// assign values to the pointer
+			// and tail
 			INode pointer = head;
-			int len = 0;
+			INode tail = head.next;
 
-			// calculate length of the linked list
-
-			while (pointer != null) {
-				len++;
+			while (tail != null && tail.next != null) {
+				// move pointer to next node
 				pointer = pointer.next;
+
+				// move tail two nodes
+				// at a time
+				pointer = tail.next.next;
 			}
 
-			// 'count' the number of nodes after which
-			// the new node is to be inserted
-			int count = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
-			pointer = head;
-
-			// 'pointer' points to the node after which
-			// the new node is to be inserted
-			while (count-- > 1)
-				pointer = pointer.next;
-
-			// insert the 'newNode' and adjust
-			// the required links
 			newNode.next = pointer.next;
 			pointer.next = newNode;
 		}
