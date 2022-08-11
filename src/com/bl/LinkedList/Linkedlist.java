@@ -24,6 +24,7 @@ public class Linkedlist {
 	
 	public void dispalyLinkedList() {
 		INode currentNode = head;
+		//iterating using while loop.if current node is not empty, it adds new Node to the next
 		while ( currentNode != null) {
 			System.out.print(currentNode.getKey() + " -> ");
 			currentNode = currentNode.next;
