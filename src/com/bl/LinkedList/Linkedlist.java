@@ -55,7 +55,8 @@ public class Linkedlist {
 
 			while (tail != null && tail.next != null) {
 				// move pointer to next node
-				pointer = pointer.next;
+				//pointer = pointer.next;
+				pointer = newNode;
 
 				// move tail two nodes
 				// at a time
@@ -126,16 +127,45 @@ public class Linkedlist {
 		return head;
 	}
 	
-	 public boolean search(INode head, int x) {
-		 INode newNode = new INode(x);
+	 public boolean search(INode head, int i) {
+		 INode newNode = new INode(i);
 	    
 	        INode current = head;    //Initializing current node
 	        while (current != null)
 	        {
-	            if (current.key == x)
+	            if (current.key == i)
 	                return true;    //if it is true,data found
 	            current = current.next;
 	        }
 	        return false;    //if not, data not found
 	    }
+	 
+	 public void insertNextNode(int data, int newData) {
+			INode newNode = new INode(data);
+			// if list is empty
+			if (head == null)
+				head = newNode;
+
+			else {
+
+				// assign values to the pointer
+				// and tail
+				INode pointer = head;
+				INode tail = head.next;
+
+				while (tail != null && tail.next != null) {
+					// move pointer to next node
+					pointer = newNode;
+					pointer = newNode.next;
+					
+
+					// move tail two nodes
+					// at a time
+					//pointer = newNode;
+				}
+
+				newNode.next = pointer.next;
+				pointer.next = newNode;
+			}
+		}
 }

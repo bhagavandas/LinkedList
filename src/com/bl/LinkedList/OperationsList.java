@@ -88,12 +88,41 @@ public class OperationsList {
 		list.add(x);
 		list.add(y);
 		list.add(z);
+		list.dispalyLinkedList();
         System.out.println();
 		 if (list.search(list.head, 30))
 	            System.out.println("Searched element is found");
 	        else
 	            System.out.println("Searched element is not found");
 		
+	}
+	
+	public void searchAndInsertData() {
+		Linkedlist list = new Linkedlist();
+		
+		System.out.println();
+		
+		list.add(56);
+		list.add(30);
+		
+		
+		
+        System.out.println();
+        
+		 if (list.search(list.head, 56)) {
+			
+			 list.insertNextNode(40, 30);
+			 
+			 list.add(70);
+			// list.insertNextNode(40, 30);
+			 
+		 System.out.println("Element is added");
+		 }   
+	        else {
+	            System.out.println("Searched element is not found");
+	        }
+		
+		 list.dispalyLinkedList();
 	}
 	
 }

@@ -8,10 +8,12 @@ public class LinkedListMain {
 		OperationsList obj = new OperationsList();
 		obj.addData();
 		obj.appendData();
-		obj.insertData();
+		//obj.insertData();
 		obj.deleteData();
 		obj.deleteLastElementData();
-		obj.searchElementData();
+		//obj.searchElementData();
+		obj.searchAndInsertData();
+		//obj.insertData();
 
 	}
 }
