@@ -1,6 +1,7 @@
 package com.bl.LinkedList;
 
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class OperationsList {
 
@@ -45,7 +46,7 @@ public class OperationsList {
 
 	}
 	
-	public void DeleteData() {
+	public void deleteData() {
 		Linkedlist list = new Linkedlist();
 		
 		list.add(56);
@@ -61,7 +62,7 @@ public class OperationsList {
 	}
 	
 
-	public void DeleteLastElementData() {
+	public void deleteLastElementData() {
 		Linkedlist list = new Linkedlist();
 		
 		list.add(56);
@@ -70,10 +71,28 @@ public class OperationsList {
         
 		list.popLastNode(70);
 		
-		
 		System.out.println();
 		System.out.print("Linkedlist sequence after last element deleted : ");
 		list.dispalyLinkedList();
+		
+	}
+	
+	public void searchElementData() {
+		Linkedlist list = new Linkedlist();
+		Scanner sc = new Scanner(System.in);
+		System.out.println();
+		System.out.println("Enter the three key values: ");
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int z = sc.nextInt();
+		list.add(x);
+		list.add(y);
+		list.add(z);
+        System.out.println();
+		 if (list.search(list.head, 30))
+	            System.out.println("Searched element is found");
+	        else
+	            System.out.println("Searched element is not found");
 		
 	}
 	

@@ -125,4 +125,17 @@ public class Linkedlist {
 
 		return head;
 	}
+	
+	 public boolean search(INode head, int x) {
+		 INode newNode = new INode(x);
+	    
+	        INode current = head;    //Initializing current node
+	        while (current != null)
+	        {
+	            if (current.key == x)
+	                return true;    //if it is true,data found
+	            current = current.next;
+	        }
+	        return false;    //if not, data not found
+	    }
 }
