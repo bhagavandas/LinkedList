@@ -1,8 +1,10 @@
 package com.bl.LinkedList;
 
 public class INode {
-	int key;
+	static int key;
 	INode next;
+	INode head;
+	INode tail;
 	/**
 	 * @param key
 	 */
