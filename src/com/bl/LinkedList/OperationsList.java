@@ -45,38 +45,37 @@ public class OperationsList {
 		list.dispalyLinkedList();
 
 	}
-	
+
 	public void deleteData() {
 		Linkedlist list = new Linkedlist();
-		
+
 		list.add(56);
 		list.add(30);
 		list.add(70);
-        
+
 		list.deleteNode(56);
-		
+
 		System.out.println();
 		System.out.print("Linkedlist sequence after deleted : ");
 		list.dispalyLinkedList();
-		
+
 	}
-	
 
 	public void deleteLastElementData() {
 		Linkedlist list = new Linkedlist();
-		
+
 		list.add(56);
 		list.add(30);
 		list.add(70);
-        
+
 		list.popLastNode(70);
-		
+
 		System.out.println();
 		System.out.print("Linkedlist sequence after last element deleted : ");
 		list.dispalyLinkedList();
-		
+
 	}
-	
+
 	public void searchElementData() {
 		Linkedlist list = new Linkedlist();
 		Scanner sc = new Scanner(System.in);
@@ -89,40 +88,56 @@ public class OperationsList {
 		list.add(y);
 		list.add(z);
 		list.dispalyLinkedList();
-        System.out.println();
-		 if (list.search(list.head, 30))
-	            System.out.println("Searched element is found");
-	        else
-	            System.out.println("Searched element is not found");
-		
+		System.out.println();
+		if (list.search(list.head, 30))
+			System.out.println("Searched element is found");
+		else
+			System.out.println("Searched element is not found");
+
 	}
-	
+
 	public void searchAndInsertData() {
 		Linkedlist list = new Linkedlist();
-		
+
 		System.out.println();
-		
+
 		list.add(56);
 		list.add(30);
-		
-		
-		
-        System.out.println();
-        
-		 if (list.search(list.head, 56)) {
-			
-			 list.insertNextNode(40, 30);
-			 
-			 list.add(70);
+
+		System.out.println();
+
+		if (list.search(list.head, 56)) {
+
+			list.insertNextNode(40, 30);
+
+			list.add(70);
 			// list.insertNextNode(40, 30);
-			 
-		 System.out.println("Element is added");
-		 }   
-	        else {
-	            System.out.println("Searched element is not found");
-	        }
-		
-		 list.dispalyLinkedList();
+
+			System.out.println("Element is added");
+		} else {
+			System.out.println("Searched element is not found");
+		}
+
+		list.dispalyLinkedList();
 	}
+	public void sizeAnddeleteData() {
+		Linkedlist list = new Linkedlist();
+
+		list.add(56);
+		list.add(30);
+		list.add(40);
+		list.add(70);
+		
+		if (list.search(list.head, 56)) {
+
+
+			System.out.println("Element is found!");
+		}
+		list.deleteNode(40);
 	
+		System.out.println("List size:" + list.size());
+		System.out.print("Linkedlist sequence after deleted : ");
+		list.dispalyLinkedList();
+		
+	}
 }

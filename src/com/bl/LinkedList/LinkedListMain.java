@@ -13,7 +13,6 @@ public class LinkedListMain {
 		obj.deleteLastElementData();
 		//obj.searchElementData();
 		obj.searchAndInsertData();
-		//obj.insertData();
-
+		obj.sizeAnddeleteData();
 	}
 }
