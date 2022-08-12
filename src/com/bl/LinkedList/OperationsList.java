@@ -44,6 +44,7 @@ public class OperationsList {
 		list.dispalyLinkedList();
 
 	}
+	
 	public void DeleteData() {
 		Linkedlist list = new Linkedlist();
 		
@@ -59,5 +60,21 @@ public class OperationsList {
 		
 	}
 	
+
+	public void DeleteLastElementData() {
+		Linkedlist list = new Linkedlist();
+		
+		list.add(56);
+		list.add(30);
+		list.add(70);
+        
+		list.popLastNode(70);
+		
+		
+		System.out.println();
+		System.out.print("Linkedlist sequence after last element deleted : ");
+		list.dispalyLinkedList();
+		
+	}
 	
 }

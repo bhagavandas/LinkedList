@@ -10,6 +10,7 @@ public class LinkedListMain {
 		obj.appendData();
 		obj.insertData();
 		obj.DeleteData();
+		obj.DeleteLastElementData();
 
 	}
 }
